@@ -1,0 +1,18 @@
+{
+    "1":{
+        "icon": "icons/grass.png",
+        "classification": "common",
+        "tileSize": [
+            16,
+            16
+        ]
+    },
+    "2":{
+        "icon": "icons/cobblestone.png",
+        "classification": "common",
+        "tileSize":[
+            16,
+            16
+        ]
+    }
+}
