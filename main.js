@@ -55,16 +55,16 @@ if(fs.existsSync(`map/${mapf}.ucmp`)){
             case "1":
                 //console.log("e")
                 const picture = fs.readFileSync("icons/grass.png");
-                writeString += `:-+@$@
+                writeString += `>${xcord}/${ycord}.${mainId}
 ${picture}
-$#$+_-`
+&`
 fs.writeFileSync(`map/${mapf}.cmp`, writeString)
                 break;
             case "2":
                 const picturez = fs.readFileSync("icons/cobblestone.png");
-                writeString += `:-+@$@
+                writeString += `>${xcord}/${ycord}.${mainId}
 ${picturez}
-$#$+_-`
+&`
 
                 fs.writeFileSync(`map/${mapf}.cmp`, writeString)
                 break;
