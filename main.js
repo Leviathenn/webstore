@@ -41,25 +41,35 @@ if(fs.existsSync(`map/${mapf}.ucmp`)){
     const map = fs.readFileSync(`map/${mapf}.ucmp`);
     const mapData = map.toString().split(" ");
     mapData.forEach(id =>{
-        const mainId = id.split(':')
-        
-        switch (parseInt(mainId)) {
-            case 1:
+        const mainIdS = id.split(':');
+        const mainId = mainIdS[0]
+        const cords = mainIdS[1].split(",")
+        const xcord = cords[0]
+        const ycord = cords[1];
+        //console.log(`
+        //mainId: ${mainId}
+        //cords: ${cords}
+        //xcord: ${xcord}
+       // ycord: ${ycord}`)
+        switch (mainId) {
+            case "1":
+                //console.log("e")
                 const picture = fs.readFileSync("icons/grass.png");
                 writeString += `:-+@$@
 ${picture}
 $#$+_-`
-                
+fs.writeFileSync(`map/${mapf}.cmp`, writeString)
                 break;
-            case 2:
+            case "2":
                 const picturez = fs.readFileSync("icons/cobblestone.png");
                 writeString += `:-+@$@
 ${picturez}
 $#$+_-`
+
                 fs.writeFileSync(`map/${mapf}.cmp`, writeString)
                 break;
             default:
-                console.log(`Error: id: ${id} does not exist.`)
+                console.log(`Error: id: ${mainId} does not exist.`)
                 process.exit(1)
                 
                 break;
