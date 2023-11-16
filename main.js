@@ -25,7 +25,7 @@ ExitCode: 0
 
 //process.exit(0);
 
-let writeString;
+let writeString = "";
 
 const mapf = process.argv[2]
 if(fs.existsSync(`map/${mapf}.ucmp`)){
