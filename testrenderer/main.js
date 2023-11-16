@@ -25,7 +25,10 @@ $(document).ready(function (){
                     ycord: ${ycord}
                     </h1>
                     <br>
-                    **/`)
+                    `)
+                    **/
+            
+                    
                 
                            
                 }
