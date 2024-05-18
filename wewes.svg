@@ -1,0 +1,7 @@
+<svg>
+<ellipse cx="200" cy="150" rx="32" ry="85"/>
+    
+    <script>
+        alert("test!");
+    </script>
+</svg>
